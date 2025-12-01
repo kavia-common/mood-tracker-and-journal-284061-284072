@@ -67,8 +67,9 @@ npm run dev
 - Development: `npm run dev` (nodemon, auto-restart)
 - Production/Container start: `npm start` (runs `node src/server.js`)
 - Procfile is provided to ensure platforms expecting a Procfile use `npm start`.
+- Optional: `start.sh` script is available for platforms invoking a shell entrypoint. It runs `npm ci && npm start` and does not use or reference any Python venv/uvicorn components.
 
-Server will run at http://localhost:3001
+Server will run at http://localhost:3001 (configurable via `PORT`).
 
 ## API
 
@@ -140,4 +141,4 @@ Use environment variables:
 - All SQL queries are parameterized.
 - JWT includes user id as `sub` and `email`.
 - Ensure DB connection string is correct for your environment.
-- Startup uses Node.js (not FastAPI). Any previous uvicorn/FastAPI references are obsolete and removed.
+- Startup uses Node.js (not FastAPI). Any previous uvicorn/FastAPI references are obsolete and removed. There are no references to `src.api.main` in this codebase.
