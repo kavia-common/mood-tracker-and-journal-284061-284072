@@ -65,6 +65,7 @@ npm run dev
 - Preview environments: run `npm run preview` or `bash ./preview_start.sh` (installs deps and starts on the configured PORT)
 - Procfile is provided to ensure platforms expecting a Procfile use `npm start`.
 - Optional: `start.sh` and `preview_start.sh` scripts are available for platforms invoking a shell entrypoint. They install dependencies (`npm ci` if lockfile exists or `npm install` otherwise) and run `npm start`. They do not use or reference any Python venv/uvicorn components.
+- Additionally, the repository root has a `run.sh` shim and a `Makefile` with `start` target for preview systems that auto-detect conventional start commands. These ensure Node.js is started (not FastAPI).
 
 Server will run at http://localhost:3001 (configurable via `PORT`).
 Health route: `GET /` returns `{ "message": "Healthy" }`.
