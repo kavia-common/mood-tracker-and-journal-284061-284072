@@ -1,0 +1,5 @@
+start: bash ./preview_start.sh
+env:
+  PORT: "3001"
+working_dir: .
+# Node.js + Express backend. Do not run uvicorn or refer to Python.

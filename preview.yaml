@@ -11,3 +11,8 @@ services:
     # Optionally expose the port mapping information for preview systems
     ports:
       - "3001:3001"
+# Fallback command mapping for preview runners that ignore working_dir/start above:
+# This ensures we never run a Python/uvicorn command.
+commands:
+  backend:
+    run: "cd mood_log_backend && bash preview_start.sh"
