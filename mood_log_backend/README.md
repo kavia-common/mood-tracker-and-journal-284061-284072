@@ -64,6 +64,10 @@ npm install
 npm run dev
 ```
 
+- Development: `npm run dev` (nodemon, auto-restart)
+- Production/Container start: `npm start` (runs `node src/server.js`)
+- Procfile is provided to ensure platforms expecting a Procfile use `npm start`.
+
 Server will run at http://localhost:3001
 
 ## API
@@ -136,3 +140,4 @@ Use environment variables:
 - All SQL queries are parameterized.
 - JWT includes user id as `sub` and `email`.
 - Ensure DB connection string is correct for your environment.
+- Startup uses Node.js (not FastAPI). Any previous uvicorn/FastAPI references are obsolete and removed.
