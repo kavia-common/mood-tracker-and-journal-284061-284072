@@ -14,15 +14,11 @@ This is the Node.js + Express backend for the MoodLog MVP. It provides JWT-based
 
 ## Environment
 
-Create a `.env` using `.env.example`:
+Create a `.env` using `.env.example` (do not commit secrets):
 
 ```
-PORT=3001
-DATABASE_URL=postgres://appuser:dbuser123@localhost:5000/moodlog
-JWT_SECRET=changeme
-JWT_EXPIRES_IN=7d
-BCRYPT_SALT_ROUNDS=10
-CORS_ORIGIN=http://localhost:3000
+cp .env.example .env
+# Edit values in .env as appropriate
 ```
 
 Ensure your database has tables:

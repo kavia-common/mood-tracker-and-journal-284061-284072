@@ -4,6 +4,7 @@ services:
     # Use the existing backend folder
     working_dir: ./mood_log_backend
     # Explicitly run our preview script (CI-friendly, installs deps, runs npm start)
+    # IMPORTANT: This is a Node.js service; do not change to any Python/uvicorn/FastAPI command.
     start: "bash preview_start.sh"
     env:
       - PORT=3001

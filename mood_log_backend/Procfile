@@ -1,1 +1,3 @@
+# Node.js + Express app entry for platforms using Procfile.
+# Do not change to any Python/uvicorn command.
 web: npm start
